@@ -11,14 +11,22 @@ namespace AkilliMutfak
         private static KahveMakinesi BKahveMakinesi = new KahveMakinesi();
         enum Miktar { Bos = 0, Dusuk = 10, Orta = 20, Dolu = 30 };
 
-        Miktar MiktarKahve;
+        //KahveCekirdekleri
+        Miktar C_Arabistan;
+        Miktar C_Afrika;
+        Miktar C_Kolombiya;
+        Miktar C_Turk;
+
         Miktar MiktarSut;
         Miktar MiktarCiko;//Cikolata Miktari
+        Miktar MiktarVanilya;
 
+        int BardakSayisi;
 
         private KahveMakinesi()
         {
             HepsiniYenile();
+            BardakSayisi = 30;
         }
 
         public static KahveMakinesi GetKahveMakinesi()
@@ -28,15 +36,12 @@ namespace AkilliMutfak
 
         private void HepsiniYenile()
         {
-            KahveYenile();
             SutYenile();
             CikoYenile();
+            VanilyaYenile();
         }
 
-        private void KahveYenile()
-        {
-            MiktarKahve = Miktar.Dolu;
-        }
+    
 
         private void SutYenile()
         {
@@ -47,5 +52,14 @@ namespace AkilliMutfak
         {
             MiktarCiko = Miktar.Dolu;
         }
+
+        private void VanilyaYenile()
+        {
+            MiktarVanilya = Miktar.Dolu;
+        }
+
+
+
+
     }
 }
