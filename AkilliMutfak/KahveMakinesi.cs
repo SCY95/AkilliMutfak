@@ -82,13 +82,10 @@ namespace AkilliMutfak
         }
 
     
-        public void IcecekHazirla(SicakIcecek sicakicecek)
+        public void IcecekHazirla(SicakIcecek sicakicecek)//TODO icecek uretimi yaptırılacak
         {
             Depo = Depo - sicakicecek.MalzemeVer();
         }
-
-
-
 
     }
 
