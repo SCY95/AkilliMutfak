@@ -8,10 +8,21 @@ namespace AkilliMutfak
 {
     public abstract class SicakIcecek
     {
-        Malzemeler Mlzm;
+        public Malzemeler mlzm;
+
+        public abstract Malzemeler MalzemeVer();
+
+
     }
 
-
+    public class TurkKahvesi : SicakIcecek
+    {
+        public override Malzemeler MalzemeVer()
+        {
+            mlzm.C_Turk = 2;
+            return mlzm;
+        }
+    }
 
 
 

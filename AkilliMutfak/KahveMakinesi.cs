@@ -37,46 +37,49 @@ namespace AkilliMutfak
             SutYenile();
             CikoYenile();
             VanilyaYenile();
+            SekerYenile();
         }
 
 
         private void C_AfrikaYenile()
         {
-            Depo.MiktarSut = Miktar.Dolu;
+            Depo.MiktarSut = 30;
         }
         
-
-
         private void C_ArabistanYenile()
         {
-            Depo.C_Arabistan = Miktar.Dolu;
+            Depo.C_Arabistan = 30;
         }
 
         private void C_KolombiyaYenile()
         {
-            Depo.C_Arabistan = Miktar.Dolu;
+            Depo.C_Arabistan = 30;
         }
 
         private void C_TurkYenile()
         {
-            Depo.MiktarSut = Miktar.Dolu;
+            Depo.MiktarSut = 30;
         }
 
         private void SutYenile()
         {
-            Depo.MiktarSut = Miktar.Dolu;
+            Depo.MiktarSut = 30;
         }
 
         private void CikoYenile()
         {
-            Depo.MiktarCiko = Miktar.Dolu;
+            Depo.MiktarCiko = 30;
         }
 
         private void VanilyaYenile()
         {
-            Depo.MiktarVanilya = Miktar.Dolu;
+            Depo.MiktarVanilya = 30;
         }
 
+        private void SekerYenile()
+        {
+            Depo.MiktarSeker = 30;
+        }
 
 
 
@@ -84,17 +87,32 @@ namespace AkilliMutfak
 
 
 
-    struct Malzemeler 
+    public class Malzemeler 
     {
         //KahveCekirdekleri
-        public Miktar C_Afrika;
-        public Miktar C_Arabistan;
-        public Miktar C_Kolombiya;
-        public Miktar C_Turk;
+        public int C_Afrika;
+        public int C_Arabistan;
+        public int C_Kolombiya;
+        public int C_Turk;
 
-        public Miktar MiktarSut;
-        public Miktar MiktarCiko;//Cikolata Miktari
-        public Miktar MiktarVanilya;
+        public int MiktarSut;
+        public int MiktarCiko;//Cikolata Miktari
+        public int MiktarVanilya;
+        public int MiktarSeker;
+
+        public Malzemeler()
+        {
+            C_Afrika = 0;
+            C_Arabistan = 0;
+            C_Kolombiya = 0;
+            C_Turk = 0;
+
+            MiktarSut = 0;
+            MiktarCiko = 0;
+            MiktarVanilya = 0;
+            MiktarSeker = 0;
+        }
+
     }
 
 
