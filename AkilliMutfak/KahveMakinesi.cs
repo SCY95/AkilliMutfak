@@ -6,20 +6,13 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
+    enum Miktar { Bos = 0, Dusuk = 10, Orta = 20, Dolu = 30 };
     class KahveMakinesi
     {
         private static KahveMakinesi BKahveMakinesi = new KahveMakinesi();
-        enum Miktar { Bos = 0, Dusuk = 10, Orta = 20, Dolu = 30 };
 
-        //KahveCekirdekleri
-        Miktar C_Arabistan;
-        Miktar C_Afrika;
-        Miktar C_Kolombiya;
-        Miktar C_Turk;
 
-        Miktar MiktarSut;
-        Miktar MiktarCiko;//Cikolata Miktari
-        Miktar MiktarVanilya;
+        Malzemeler Depo;
 
         int BardakSayisi;
 
@@ -36,30 +29,76 @@ namespace AkilliMutfak
 
         private void HepsiniYenile()
         {
+            C_AfrikaYenile();
+            C_ArabistanYenile();
+            C_KolombiyaYenile();
+            C_TurkYenile();
+
             SutYenile();
             CikoYenile();
             VanilyaYenile();
         }
 
-    
+
+        private void C_AfrikaYenile()
+        {
+            Depo.MiktarSut = Miktar.Dolu;
+        }
+        
+
+
+        private void C_ArabistanYenile()
+        {
+            Depo.C_Arabistan = Miktar.Dolu;
+        }
+
+        private void C_KolombiyaYenile()
+        {
+            Depo.C_Arabistan = Miktar.Dolu;
+        }
+
+        private void C_TurkYenile()
+        {
+            Depo.MiktarSut = Miktar.Dolu;
+        }
 
         private void SutYenile()
         {
-            MiktarSut = Miktar.Dolu;
+            Depo.MiktarSut = Miktar.Dolu;
         }
 
         private void CikoYenile()
         {
-            MiktarCiko = Miktar.Dolu;
+            Depo.MiktarCiko = Miktar.Dolu;
         }
 
         private void VanilyaYenile()
         {
-            MiktarVanilya = Miktar.Dolu;
+            Depo.MiktarVanilya = Miktar.Dolu;
         }
 
 
 
 
     }
+
+
+
+    struct Malzemeler 
+    {
+        //KahveCekirdekleri
+        public Miktar C_Afrika;
+        public Miktar C_Arabistan;
+        public Miktar C_Kolombiya;
+        public Miktar C_Turk;
+
+        public Miktar MiktarSut;
+        public Miktar MiktarCiko;//Cikolata Miktari
+        public Miktar MiktarVanilya;
+    }
+
+
+
+
+
 }
