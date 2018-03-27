@@ -1,0 +1,5 @@
+D:\CSCalismalar\AkilliMutfak\AkilliMutfak\bin\Debug\AkilliMutfak.exe.config
+D:\CSCalismalar\AkilliMutfak\AkilliMutfak\bin\Debug\AkilliMutfak.exe
+D:\CSCalismalar\AkilliMutfak\AkilliMutfak\bin\Debug\AkilliMutfak.pdb
+D:\CSCalismalar\AkilliMutfak\AkilliMutfak\obj\Debug\AkilliMutfak.exe
+D:\CSCalismalar\AkilliMutfak\AkilliMutfak\obj\Debug\AkilliMutfak.pdb
