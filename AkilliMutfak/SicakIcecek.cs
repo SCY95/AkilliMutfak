@@ -8,7 +8,7 @@ namespace AkilliMutfak
 {
     public abstract class SicakIcecek
     {
-        public Malzemeler mlzm;
+        protected Malzemeler mlzm;
 
         public abstract Malzemeler MalzemeVer();
 
@@ -25,5 +25,24 @@ namespace AkilliMutfak
     }
 
 
+
+    public abstract class Cesni : SicakIcecek { }
+
+    public class Seker : Cesni
+    {
+        SicakIcecek sicakicecek;
+
+        public Seker(SicakIcecek sicakicecek)
+        {
+            this.sicakicecek = sicakicecek;
+        }
+
+        public override Malzemeler MalzemeVer()
+        {
+            this.sicakicecek.MalzemeVer().MiktarSeker = 1;
+            return this.sicakicecek.MalzemeVer();
+        }
+
+    }
 
 }

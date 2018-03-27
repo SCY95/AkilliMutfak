@@ -10,6 +10,24 @@ namespace AkilliMutfak
     {
         static void Main(string[] args)
         {
+            KahveMakinesi kahvemakinesi = KahveMakinesi.GetKahveMakinesi();
+
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+            Console.ReadLine();
         }
     }
 }
