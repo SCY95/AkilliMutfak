@@ -7,9 +7,9 @@ using System.Threading.Tasks;
 namespace AkilliMutfak
 {
     enum Miktar { Bos = 0, Dusuk = 10, Orta = 20, Dolu = 30 };
-    class KahveMakinesi//Singleton
+    class KahveMakinesi//Singleton Pattern
     {
-        private static KahveMakinesi BKahveMakinesi = new KahveMakinesi();
+        private static KahveMakinesi BKahveMakinesi;
 
 
         Malzemeler Depo;
@@ -18,12 +18,17 @@ namespace AkilliMutfak
 
         private KahveMakinesi()
         {
+            Depo = new Malzemeler();
             HepsiniYenile();
             BardakSayisi = 30;
         }
 
         public static KahveMakinesi GetKahveMakinesi()
         {
+            if (BKahveMakinesi == null)
+            {
+                return BKahveMakinesi = new KahveMakinesi();
+            }
             return BKahveMakinesi;
         }
 

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
-    public abstract class SicakIcecek
+    public abstract class SicakIcecek//Decorator Patttern
     {
         protected Malzemeler mlzm;
 
