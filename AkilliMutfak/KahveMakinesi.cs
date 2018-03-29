@@ -29,10 +29,7 @@ namespace AkilliMutfak
 
         private void HepsiniYenile()
         {
-            C_AfrikaYenile();
-            C_ArabistanYenile();
-            C_KolombiyaYenile();
-            C_TurkYenile();
+            CekirdekYenile();
 
             SutYenile();
             CikoYenile();
@@ -41,24 +38,9 @@ namespace AkilliMutfak
         }
 
 
-        private void C_AfrikaYenile()
+        private void CekirdekYenile()
         {
-            Depo.MiktarSut = 30;
-        }
-        
-        private void C_ArabistanYenile()
-        {
-            Depo.C_Arabistan = 30;
-        }
-
-        private void C_KolombiyaYenile()
-        {
-            Depo.C_Arabistan = 30;
-        }
-
-        private void C_TurkYenile()
-        {
-            Depo.MiktarSut = 30;
+            Depo.MiktarCekirdek = 30;
         }
 
         private void SutYenile()
@@ -81,8 +63,11 @@ namespace AkilliMutfak
             Depo.MiktarSeker = 30;
         }
 
+
+
+
     
-        public void IcecekHazirla(SicakIcecek sicakicecek)//TODO icecek uretimi yaptırılacak
+        public void IcecekHazirla(SicakIcecek sicakicecek)//TODO icecek uretimi yaptirilacak
         {
             Depo = Depo - sicakicecek.MalzemeVer();
         }
@@ -94,10 +79,7 @@ namespace AkilliMutfak
     public class Malzemeler 
     {
         //KahveCekirdekleri
-        public int C_Afrika;
-        public int C_Arabistan;
-        public int C_Kolombiya;
-        public int C_Turk;
+        public int MiktarCekirdek;
 
         public int MiktarSut;
         public int MiktarCiko;//Cikolata Miktari
@@ -107,10 +89,8 @@ namespace AkilliMutfak
 
         public Malzemeler()
         {
-            C_Afrika = 0;
-            C_Arabistan = 0;
-            C_Kolombiya = 0;
-            C_Turk = 0;
+
+            MiktarCekirdek = 0;
 
             MiktarSut = 0;
             MiktarCiko = 0;
@@ -118,12 +98,9 @@ namespace AkilliMutfak
             MiktarSeker = 0;
         }
 
-        public Malzemeler(int C_Afrika, int C_Arabistan, int C_Kolombiya, int C_Turk, int MiktarSut, int MiktarCiko, int MiktarVanilya, int MiktarSeker)
+        public Malzemeler(int MiktarCekirdek, int MiktarSut, int MiktarCiko, int MiktarVanilya, int MiktarSeker)
         {
-            this.C_Afrika = C_Afrika;
-            this.C_Arabistan = C_Arabistan;
-            this.C_Kolombiya = C_Kolombiya;
-            this.C_Turk = C_Turk;
+            this.MiktarCekirdek = MiktarCekirdek;
 
             this.MiktarSut = MiktarSut;
             this.MiktarCiko = MiktarCiko;
@@ -134,8 +111,7 @@ namespace AkilliMutfak
 
         public static Malzemeler operator -(Malzemeler mlzm1, Malzemeler mlzm2)
         {
-            Malzemeler mlzm3 = new Malzemeler(mlzm1.C_Afrika - mlzm2.C_Afrika, mlzm1.C_Arabistan - mlzm2.C_Arabistan, mlzm1.C_Kolombiya - mlzm2.C_Kolombiya,
-                mlzm1.C_Turk - mlzm2.C_Turk, mlzm1.MiktarSut - mlzm2.MiktarSut, mlzm1.MiktarCiko - mlzm2.MiktarCiko, mlzm1.MiktarVanilya - mlzm2.MiktarVanilya,
+            Malzemeler mlzm3 = new Malzemeler(mlzm1.MiktarCekirdek - mlzm2.MiktarCekirdek, mlzm1.MiktarSut - mlzm2.MiktarSut, mlzm1.MiktarCiko - mlzm2.MiktarCiko, mlzm1.MiktarVanilya - mlzm2.MiktarVanilya,
                 mlzm1.MiktarSeker - mlzm2.MiktarSeker);
             return mlzm3;
         }
