@@ -6,8 +6,12 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
-    class Arayuz
+    class Havalandirma
     {
-           
+        public void Guncelle()
+        {
+
+        }
+
     }
 }

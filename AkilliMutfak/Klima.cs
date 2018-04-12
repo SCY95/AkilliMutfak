@@ -6,8 +6,14 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
-    class Arayuz
+    class Klima : Observer
     {
-           
+        public void Guncelle()
+        {
+
+        }
+
+    
+
     }
 }
