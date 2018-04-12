@@ -8,13 +8,13 @@ namespace AkilliMutfak
 {
     interface Observer
     {
-        void Guncelle();
+        void Guncelle(IklimOlcumler Olcumler);
     }
 
     interface Subject
     {
-        void GozlemciKaydet();
-        void GozlemciSil();
+        void GozlemciKaydet(Observer G);
+        void GozlemciSil(Observer G);
         void GozlemcilereBildir();
     }
 }

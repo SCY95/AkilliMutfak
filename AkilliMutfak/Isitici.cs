@@ -8,10 +8,31 @@ namespace AkilliMutfak
 {
     class Isitici
     {
-        public void Guncelle()
+        private IklimOlcumler Olcumler;
+
+        public Isitici()
+        {
+            
+        }
+
+
+
+        public void Guncelle(IklimOlcumler Olcumler)
+        {
+            this.Olcumler = Olcumler;
+
+            if (Olcumler.Sicaklik < 21)
+            {
+                Calistir();
+            }
+        }
+
+
+        public void Calistir()
         {
 
         }
+ 
 
     }
 }

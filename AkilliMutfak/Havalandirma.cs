@@ -8,7 +8,26 @@ namespace AkilliMutfak
 {
     class Havalandirma
     {
-        public void Guncelle()
+        private IklimOlcumler Olcumler;
+
+        public Havalandirma()
+        {
+
+        }
+
+
+
+        public void Guncelle(IklimOlcumler Olcumler)
+        {
+            this.Olcumler = Olcumler;
+
+            if (Olcumler.Nem < 45 || Olcumler.Nem > 55 || Olcumler.HavaTemiz == false)
+            {
+                Calistir();
+            }
+        }
+
+        public void Calistir()
         {
 
         }

@@ -8,7 +8,7 @@ namespace AkilliMutfak
 {
     public struct IklimOlcumler
     {
-        public float O2;
+        public bool HavaTemiz;
         public float Sicaklik;
         public float Nem;
     }
@@ -17,30 +17,57 @@ namespace AkilliMutfak
     {
         
         private IklimOlcumler Olcumler;
+        private List<Observer> Gozlemciler;
 
-
-
-        public void GozlemciKaydet()
+        public IklimSensor()
         {
-
+            Gozlemciler = new List<Observer>();
         }
 
-        public void GozlemciSil()
-        {
 
+
+
+        public void GozlemciKaydet(Observer G)
+        {
+            Gozlemciler.Add(G);
+        }
+
+        public void GozlemciSil(Observer G)
+        {
+            if (Gozlemciler.IndexOf(G) >= 0)
+            {
+                Gozlemciler.Remove(G);
+            }
         }
 
         public void GozlemcilereBildir()
         {
-
+            for (int i = 0; i < Gozlemciler.Count; i++)
+            {
+                Observer Gozlemci = Gozlemciler[i];
+                Gozlemci.Guncelle(this.Olcumler);
+            }
         }
 
 
 
-
-        public float GetO2()
+        public void IklimDegisti()
         {
-            return Olcumler.O2;
+            GozlemcilereBildir();
+        }
+
+
+
+        public void setOlcumler(IklimOlcumler Olcumler)
+        {
+            this.Olcumler = Olcumler;
+            IklimDegisti();
+        }
+
+
+        public bool GetO2()
+        {
+            return Olcumler.HavaTemiz;
         }
 
         public float GetSicaklik()

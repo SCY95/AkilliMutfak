@@ -8,7 +8,25 @@ namespace AkilliMutfak
 {
     class Klima : Observer
     {
-        public void Guncelle()
+        private IklimOlcumler Olcumler;
+
+        public Klima()
+        {
+
+        }
+
+        public void Guncelle(IklimOlcumler Olcumler)
+        {
+            this.Olcumler = Olcumler;
+
+            if (Olcumler.Sicaklik < 21)
+            {
+                Calistir();
+            }
+        }
+
+
+        public void Calistir()
         {
 
         }
