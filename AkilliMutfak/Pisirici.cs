@@ -8,9 +8,9 @@ namespace AkilliMutfak
 {
     public abstract class Pisirici
     {
-        public Yemek YemekIste(string yemekTuru)
+        public Yemek YemekIste()
         {
-            Yemek yemek = YemekYap(yemekTuru);
+            Yemek yemek = YemekYap();
 
             yemek.Hazirla();
             yemek.Pisir();
@@ -20,40 +20,65 @@ namespace AkilliMutfak
             return yemek;
         }
 
-        protected abstract Yemek YemekYap(string yemekTuru);
+        protected abstract Yemek YemekYap();
     }
 
     public class Firin : Pisirici
     {
-        protected override Yemek YemekYap(string yemekTuru)
+        protected override Yemek YemekYap()
         {
+            
             Yemek yemek = null;
 
-            if (yemekTuru == "Sebze")
-                yemek = new FirindaSebzeliYemek();
-            else if (yemekTuru == "Balik")
-                yemek = new FirindaBalik();
-            else if (yemekTuru == "Corba")
-                yemek = new FirindaDomatesCorbasi();
-
-            return yemek;
+            int secim;
+            Console.WriteLine("1-)Firinda sebze yemegi yap\n2-)Firinda balik yap\n3-)Firinda domates corbasi yap");
+            secim = (Convert.ToInt32(Console.ReadLine()));
+            switch (secim)
+            {
+                case 1:
+                    yemek = new FirindaSebzeliYemek();
+                    return yemek;
+                case 2:
+                    yemek = new FirindaBalik();
+                    return yemek;
+                case 3:
+                    yemek = new FirindaDomatesCorbasi();
+                    return yemek;
+                default:
+                    yemek = new FirindaSebzeliYemek();
+                    return yemek;
+            }
         }
+
+
+
     }
 
     public class Ocak : Pisirici
     {
-        protected override Yemek YemekYap(string yemekTuru)
+        protected override Yemek YemekYap()
         {
+            System.Console.Clear();
             Yemek yemek = null;
 
-            if (yemekTuru == "Sebze")
-                yemek = new OcaktaSebzeliYemek();
-            else if (yemekTuru == "Balik")
-                yemek = new OcaktaBalik();
-            else if (yemekTuru == "Corba")
-                yemek = new OcaktaCorba();
-
-            return yemek;
+            int secim;
+            Console.WriteLine("1-)Ocakta sebze yemegi yap\n2-)Ocakta balik yap\n3-)Ocakta corba yap");
+            secim = (Convert.ToInt32(Console.ReadLine()));
+            switch (secim)
+            {
+                case 1:
+                    yemek = new OcaktaSebzeliYemek();
+                    return yemek;
+                case 2:
+                    yemek = new OcaktaBalik();
+                    return yemek;
+                case 3:
+                    yemek = new OcaktaCorba();
+                    return yemek;
+                default:
+                    yemek = new OcaktaSebzeliYemek();
+                    return yemek;
+            }
         }
     }
 

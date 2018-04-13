@@ -44,8 +44,11 @@
     <Compile Include="AkilliMutfak.cs" />
     <Compile Include="Arayuz.cs" />
     <Compile Include="Havalandirma.cs" />
+    <Compile Include="IIsik.cs" />
     <Compile Include="IklimSensor.cs" />
     <Compile Include="IKomut.cs" />
+    <Compile Include="Isik.cs" />
+    <Compile Include="IsikDavranislari.cs" />
     <Compile Include="Isitici.cs" />
     <Compile Include="KahveMakinesi.cs" />
     <Compile Include="Klima.cs" />

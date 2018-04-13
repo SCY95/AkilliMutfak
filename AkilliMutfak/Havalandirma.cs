@@ -44,5 +44,13 @@ namespace AkilliMutfak
         {
             calisiyor = false;
         }
+
+        public void Otomatik()
+        {
+            if (otomatik == true)
+                otomatik = false;
+            else
+                otomatik = true;
+        }
     }
 }

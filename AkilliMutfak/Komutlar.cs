@@ -36,6 +36,21 @@ namespace AkilliMutfak
             havalandirma.Durdur();
         }
     }
+
+    public class OtomatikHavalandirma : IKomut
+    {
+        Havalandirma havalandirma;
+
+        public OtomatikHavalandirma(Havalandirma havalandirma)
+        {
+            this.havalandirma = havalandirma;
+        }
+
+        public void Yurut()
+        {
+            havalandirma.Otomatik();
+        }
+    }
     //---------------------------------------------------------------------------------------------
     //Klima
     public class KlimaAc : IKomut
@@ -67,6 +82,22 @@ namespace AkilliMutfak
             klima.Durdur();
         }
     }
+
+    public class OtoSogutma : IKomut
+    {
+        Klima klima;
+
+        public OtoSogutma(Klima klima)
+        {
+            this.klima = klima;
+        }
+
+        public void Yurut()
+        {
+            klima.Otomatik();
+        }
+    }
+
     //---------------------------------------------------------------------------------------------
     //Isıtıcı
     public class IsiticiAc : IKomut
@@ -99,6 +130,85 @@ namespace AkilliMutfak
         }
     }
 
+    public class OtoIsitici : IKomut
+    {
+        Isitici isitici;
+
+        public OtoIsitici(Isitici isitici)
+        {
+            this.isitici = isitici;
+        }
+
+        public void Yurut()
+        {
+            isitici.Otomatik();
+        }
+    }
+    //---------------------------------------------------------------------------------------------
+    //KahveMakinesi
+    public class IcecekYap : IKomut
+    {
+        KahveMakinesi kahvemakinesi;
+        
+        public IcecekYap()
+        {
+            kahvemakinesi = KahveMakinesi.GetKahveMakinesi();
+        }
+
+        public void Yurut()
+        {
+            kahvemakinesi.IcecekHazirla();
+        }
+
+
+    }
+    //---------------------------------------------------------------------------------------------
+    //Isiklar
+    public class IsikAc : IKomut
+    {
+        Isik isik;
+
+        public IsikAc(Isik isik)
+        {
+            this.isik = isik;
+        }
+
+        public void Yurut()
+        {
+            isik.Ac();
+        }
+    }
+
+    public class IsikKapa : IKomut
+    {
+        Isik isik;
+
+        public IsikKapa(Isik isik)
+        {
+            this.isik = isik;
+        }
+
+        public void Yurut()
+        {
+            isik.Kapa();
+        }
+    }
+    //---------------------------------------------------------------------------------------------
+    //Yemekpisir
+    public class YemekYap : IKomut
+    {
+        Pisirici pisirici;
+        
+        public YemekYap(Pisirici pisirici)
+        {
+            this.pisirici = pisirici;
+        }
+
+        public void Yurut()
+        {
+            pisirici.YemekIste();
+        }
+    }
 
 
 

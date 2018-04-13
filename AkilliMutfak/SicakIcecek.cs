@@ -26,6 +26,7 @@ namespace AkilliMutfak
 
         public override Malzemeler MalzemeVer()
         {
+            mlzm = new Malzemeler();
             mlzm.MiktarCekirdek = 6;
             return mlzm;
         }
@@ -40,6 +41,7 @@ namespace AkilliMutfak
 
         public override Malzemeler MalzemeVer()
         {
+            mlzm = new Malzemeler();
             mlzm.MiktarCekirdek = 9;
             return mlzm;
         }
@@ -54,6 +56,7 @@ namespace AkilliMutfak
 
         public override Malzemeler MalzemeVer()
         {
+            mlzm = new Malzemeler();
             mlzm.MiktarCekirdek = 9;
             mlzm.MiktarSut = 6;
             return mlzm;
@@ -69,6 +72,7 @@ namespace AkilliMutfak
 
         public override Malzemeler MalzemeVer()
         {
+            mlzm = new Malzemeler();
             mlzm.MiktarCekirdek = 9;
             return mlzm;
         }

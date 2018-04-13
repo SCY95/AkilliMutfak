@@ -33,22 +33,22 @@ namespace AkilliMutfak
 
     class FirindaSebzeliYemek : Yemek
     {
-        public virtual void Hazirla()
+        public override void Hazirla()
         {
             Console.WriteLine("Sebzeleri hazirla");
         }
 
-        public virtual void Pisir()
+        public override void Pisir()
         {
             Console.WriteLine("Firinda pisir");
         }
 
-        public virtual void Bol()
+        public override void Bol()
         {
             Console.WriteLine("Tabaklara koy");
         }
 
-        public virtual void Servis()
+        public override void Servis()
         {
             Console.WriteLine("Servis et");
         }
@@ -57,22 +57,22 @@ namespace AkilliMutfak
 
     class FirindaBalik : Yemek
     {
-        public virtual void Hazirla()
+        public override void Hazirla()
         {
             Console.WriteLine("Baliklari ve cesnileri hazirla");
         }
 
-        public virtual void Pisir()
+        public override void Pisir()
         {
             Console.WriteLine("Firinda pisir");
         }
 
-        public virtual void Bol()
+        public override void Bol()
         {
             Console.WriteLine("Tabaklara koy");
         }
 
-        public virtual void Servis()
+        public override void Servis()
         {
             Console.WriteLine("Servis et");
         }
@@ -81,22 +81,22 @@ namespace AkilliMutfak
     
     class FirindaDomatesCorbasi : Yemek
     {
-        public virtual void Hazirla()
+        public override void Hazirla()
         {
             Console.WriteLine("Domatesleri hazirla");
         }
 
-        public virtual void Pisir()
+        public override void Pisir()
         {
             Console.WriteLine("Firinda Pisir");
         }
 
-        public virtual void Bol()
+        public override void Bol()
         {
             Console.WriteLine("Kaselere koy");
         }
 
-        public virtual void Servis()
+        public override void Servis()
         {
             Console.WriteLine("Servis et");
         }
@@ -109,22 +109,22 @@ namespace AkilliMutfak
 
     class OcaktaSebzeliYemek : Yemek
     {
-        public virtual void Hazirla()
+        public override void Hazirla()
         {
             Console.WriteLine("Sebzeleri hazirla");
         }
 
-        public virtual void Pisir()
+        public override void Pisir()
         {
             Console.WriteLine("Ocakta pisir");
         }
 
-        public virtual void Bol()
+        public override void Bol()
         {
             Console.WriteLine("Tabaklara koy");
         }
 
-        public virtual void Servis()
+        public override void Servis()
         {
             Console.WriteLine("Servis et");
         }
@@ -133,22 +133,22 @@ namespace AkilliMutfak
 
     class OcaktaBalik : Yemek
     {
-        public virtual void Hazirla()
+        public override void Hazirla()
         {
             Console.WriteLine("Baliklari ve cesnileri hazirla");
         }
 
-        public virtual void Pisir()
+        public override void Pisir()
         {
             Console.WriteLine("Ocakta pisir");
         }
 
-        public virtual void Bol()
+        public override void Bol()
         {
             Console.WriteLine("Tabaklara koy");
         }
 
-        public virtual void Servis()
+        public override void Servis()
         {
             Console.WriteLine("Servis et");
         }
@@ -157,22 +157,22 @@ namespace AkilliMutfak
 
     class OcaktaCorba : Yemek
     {
-        public virtual void Hazirla()
+        public override void Hazirla()
         {
             Console.WriteLine("Corba malzemelerini hazirla");
         }
 
-        public virtual void Pisir()
+        public override void Pisir()
         {
             Console.WriteLine("Ocakta Pisir");
         }
 
-        public virtual void Bol()
+        public override void Bol()
         {
             Console.WriteLine("Kaselere koy");
         }
 
-        public virtual void Servis()
+        public override void Servis()
         {
             Console.WriteLine("Servis et");
         }

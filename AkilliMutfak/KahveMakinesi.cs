@@ -68,13 +68,189 @@ namespace AkilliMutfak
             Depo.MiktarSeker = 30;
         }
 
-
+        public bool yeterliMi(SicakIcecek sicakicecek)
+        {
+            Depo = Depo - sicakicecek.MalzemeVer();
+            if (Depo.MiktarCekirdek > 0 && Depo.MiktarSut > 0 && Depo.MiktarCiko > 0 && Depo.MiktarVanilya > 0 && Depo.MiktarSeker > 0)
+                return true;
+            else
+                return false;
+        }
 
 
     
-        public void IcecekHazirla(SicakIcecek sicakicecek)//TODO icecek uretimi yaptirilacak
+        public SicakIcecek IcecekHazirla()//TODO icecek uretimi yaptirilacak
         {
-            Depo = Depo - sicakicecek.MalzemeVer();
+            System.Console.Clear();
+
+            int secim;
+            SicakIcecek sicakicecek;
+
+            Console.WriteLine("Icecegi secin\n" +
+            "1-) TurkKahvesi\n2-) Espresso\n3-) Latte \n4-) Filtre "
+            );
+            secim = (Convert.ToInt32(Console.ReadLine()));
+
+
+            
+                switch (secim)
+                {
+                case 1:
+                   if (yeterliMi(new TurkKahvesi()))
+                    sicakicecek = new TurkKahvesi();
+                    else 
+                    {
+                        Console.WriteLine("TurkKahvesi icin yeterli malzeme yok!\n" +
+                            "Malzemeleri yenile?"
+                            );
+                        Console.ReadLine();
+                        HepsiniYenile();
+                        Console.WriteLine("Malzemeler yenilendi");
+                        sicakicecek = new TurkKahvesi();
+                    }
+                    
+             
+                    break;
+                case 2:
+                    if (yeterliMi(new Espresso()))
+                    sicakicecek = new Espresso();
+                    else 
+                    {
+                        Console.WriteLine("Espresso icin yeterli malzeme yok!\n" +
+                            "Malzemeleri yenile?"
+                            );
+                        Console.ReadLine();
+                        HepsiniYenile();
+                        Console.WriteLine("Malzemeler yenilendi");
+                        sicakicecek = new Espresso();
+                    }
+                    
+              
+                    break;
+                case 3:
+                    if (yeterliMi(new Latte()))
+                    sicakicecek = new Latte();
+                    else 
+                    {
+                        Console.WriteLine("Latte icin yeterli malzeme yok!\n" +
+                            "Malzemeleri yenile?"
+                            );
+                        Console.ReadLine();
+                        HepsiniYenile();
+                        Console.WriteLine("Malzemeler yenilendi");
+                        sicakicecek = new Latte();
+                    }
+                    
+               
+                    break;
+                case 4:
+                    if (yeterliMi(new Filtre()))
+                    sicakicecek = new Filtre();
+                    else 
+                    {
+                        Console.WriteLine("Filtre icin yeterli malzeme yok!\n" +
+                            "Malzemeleri yenile?"
+                            );
+                        Console.ReadLine();
+                        HepsiniYenile();
+                        Console.WriteLine("Malzemeler yenilendi");
+                        sicakicecek = new Filtre();
+                    }
+                    
+                
+                    break;
+                default:
+                    if (yeterliMi(new TurkKahvesi()))
+                    sicakicecek = new TurkKahvesi();
+                    else 
+                    {
+                        Console.WriteLine("TurkKahvesi icin yeterli malzeme yok!\n" +
+                            "Malzemeleri yenile?"
+                            );
+                        Console.ReadLine();
+                        HepsiniYenile();
+                        Console.WriteLine("Malzemeler yenilendi");
+                        sicakicecek = new TurkKahvesi();
+                    }
+                    
+                   
+                    break;
+                }
+            
+        
+
+
+            Console.WriteLine(sicakicecek.aciklama()
+                +"\nCesniyi secin\n" +
+           "1-) Seker\n2-) Vanilya\n3-) Cikolata \n4-) Yeterli");
+         
+
+            secim = (Convert.ToInt32(Console.ReadLine()));
+
+            while (secim != 4)
+            {
+
+                Console.WriteLine(sicakicecek.aciklama()
+               + "\nCesniyi secin\n" +
+                  "1-) Seker\n2-) Vanilya\n3-) Cikolata \n4-) Yeterli");
+          
+
+                secim = (Convert.ToInt32(Console.ReadLine()));
+
+                switch (secim)
+                {
+                    case 1:
+                        if (yeterliMi(sicakicecek))
+                            sicakicecek = new Seker(sicakicecek);
+                        else
+                        {
+                            Console.WriteLine(sicakicecek.aciklama() + " icin yeterli malzeme yok!\n" +
+                                "Malzemeleri yenile?"
+                                );
+                            Console.ReadLine();
+                            HepsiniYenile();
+                            Console.WriteLine("Malzemeler yenilendi");
+                            sicakicecek = new Seker(sicakicecek);
+                        }
+                        break;
+                    case 2:
+                        if (yeterliMi(sicakicecek))
+                            sicakicecek = new Vanilya(sicakicecek);
+                        else
+                        {
+                            Console.WriteLine(sicakicecek.aciklama() + " icin yeterli malzeme yok!\n" +
+                                "Malzemeleri yenile?"
+                                );
+                            Console.ReadLine();
+                            HepsiniYenile();
+                            Console.WriteLine("Malzemeler yenilendi");
+                            sicakicecek = new Vanilya(sicakicecek);
+                        }
+                        break;
+                    case 3:
+                        if (yeterliMi(sicakicecek))
+                            sicakicecek = new Cikolata(sicakicecek);
+                        else
+                        {
+                            Console.WriteLine(sicakicecek.aciklama() + " icin yeterli malzeme yok!\n" +
+                                "Malzemeleri yenile?"
+                                );
+                            Console.ReadLine();
+                            HepsiniYenile();
+                            Console.WriteLine("Malzemeler yenilendi");
+                            sicakicecek = new Cikolata(sicakicecek);
+                        }
+                        break;
+                    default:
+                        secim = 4;
+                        break;
+                }
+            }
+
+
+            return sicakicecek;
+
+            
         }
 
     }

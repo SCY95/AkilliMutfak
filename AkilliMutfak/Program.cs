@@ -10,8 +10,11 @@ namespace AkilliMutfak
     {
         static void Main(string[] args)
         {
-         
+            AkilliMutfak akillimutfak = new AkilliMutfak();
 
+            Arayuz arayuz = new Arayuz(akillimutfak);
+
+            arayuz.Calistir();
             
 
 
