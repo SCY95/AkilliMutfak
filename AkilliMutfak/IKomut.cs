@@ -6,28 +6,8 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
-    class Program
+    public interface IKomut
     {
-        static void Main(string[] args)
-        {
-         
-
-            
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-            Console.ReadLine();
-        }
+        void Yurut();
     }
 }

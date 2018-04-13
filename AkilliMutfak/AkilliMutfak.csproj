@@ -41,17 +41,21 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AkilliMutfak.cs" />
     <Compile Include="Arayuz.cs" />
     <Compile Include="Havalandirma.cs" />
     <Compile Include="IklimSensor.cs" />
+    <Compile Include="IKomut.cs" />
     <Compile Include="Isitici.cs" />
     <Compile Include="KahveMakinesi.cs" />
     <Compile Include="Klima.cs" />
+    <Compile Include="Komutlar.cs" />
     <Compile Include="Observer.cs" />
     <Compile Include="Pisirici.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SicakIcecek.cs" />
+    <Compile Include="UzaktanKumanda.cs" />
     <Compile Include="Yemek.cs" />
   </ItemGroup>
   <ItemGroup>

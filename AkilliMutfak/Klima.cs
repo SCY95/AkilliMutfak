@@ -6,29 +6,41 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
-    class Klima : Observer
+    public class Klima : Observer
     {
         private IklimOlcumler Olcumler;
+        public bool calisiyor;
+        public bool otomatik;
 
         public Klima()
         {
-
+            calisiyor = false;
+            otomatik = true;
         }
 
         public void Guncelle(IklimOlcumler Olcumler)
         {
             this.Olcumler = Olcumler;
 
-            if (Olcumler.Sicaklik < 21)
+            if (otomatik == true && Olcumler.Sicaklik > 21)
             {
                 Calistir();
+            }
+            else
+            {
+                Durdur();
             }
         }
 
 
         public void Calistir()
         {
+            calisiyor = true;
+        }
 
+        public void Durdur()
+        {
+            calisiyor = false;
         }
 
     

@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
-    class Isitici
+    public class Isitici
     {
         private IklimOlcumler Olcumler;
+        public bool calisiyor;
+        public bool otomatik;
 
         public Isitici()
         {
-            
+            calisiyor = false;
+            otomatik = true;
         }
 
 
@@ -21,16 +24,25 @@ namespace AkilliMutfak
         {
             this.Olcumler = Olcumler;
 
-            if (Olcumler.Sicaklik < 21)
+            if (otomatik == true && Olcumler.Sicaklik < 21 )
             {
                 Calistir();
+            }
+            else
+            {
+                Durdur();
             }
         }
 
 
         public void Calistir()
         {
+            calisiyor = true;
+        }
 
+        public void Durdur()
+        {
+            calisiyor = false;
         }
  
 

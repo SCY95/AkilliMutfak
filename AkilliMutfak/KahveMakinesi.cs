@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 namespace AkilliMutfak
 {
     enum Miktar { Bos = 0, Dusuk = 10, Orta = 20, Dolu = 30 };
-    class KahveMakinesi//Singleton Pattern
+    public class KahveMakinesi//Singleton Pattern
     {
         private static KahveMakinesi BKahveMakinesi;
 

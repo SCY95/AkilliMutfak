@@ -6,13 +6,16 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
-    class Havalandirma
+    public class Havalandirma
     {
         private IklimOlcumler Olcumler;
+        public bool calisiyor;
+        public bool otomatik;
 
         public Havalandirma()
         {
-
+            calisiyor = false;
+            otomatik = true;
         }
 
 
@@ -21,16 +24,24 @@ namespace AkilliMutfak
         {
             this.Olcumler = Olcumler;
 
-            if (Olcumler.Nem < 45 || Olcumler.Nem > 55 || Olcumler.HavaTemiz == false)
+            if (otomatik == true && Olcumler.Nem < 45 || Olcumler.Nem > 55 || Olcumler.HavaTemiz == false)
             {
                 Calistir();
+            }
+            else
+            {
+                Durdur();
             }
         }
 
         public void Calistir()
         {
-
+            calisiyor = true;
         }
 
+        public void Durdur()
+        {
+            calisiyor = false;
+        }
     }
 }
