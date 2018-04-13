@@ -63,11 +63,12 @@ namespace AkilliMutfak
         public void YemekArayuz()
         {
             System.Console.Clear();
-            int secim;
-            Console.WriteLine("1-)Firinda yemek yap\n2-)Ocakta yemek yap\n3-)Cikis");
-            secim = (Convert.ToInt32(Console.ReadLine()));
+            int secim = 1;
+            
             while (secim != 3)
             {
+                Console.WriteLine("1-)Firinda yemek yap\n2-)Ocakta yemek yap\n3-)Cikis");
+                secim = (Convert.ToInt32(Console.ReadLine()));
                 switch (secim)
                 {
                     case 1:
@@ -93,18 +94,11 @@ namespace AkilliMutfak
         public void HavalandirmaArayuz()
         {
             System.Console.Clear();
-            int secim;
-            if (akillimutfak.havalandirma.calisiyor == true) Console.Write("Havalandirma calisiyor");
-            else Console.WriteLine("Havalandirma calismiyor");
-            if (akillimutfak.havalandirma.otomatik == true) Console.WriteLine("Otomatik havalandirma acik");
-            else Console.WriteLine("Otomatik havalandirma kapali\n\n");
-
-            Console.WriteLine("1-)Ac\n2-)Kapa\n3-)Otomatik havalandirmayi ac/kapa\n4-)Cikis");
-            secim = (Convert.ToInt32(Console.ReadLine()));
+            int secim = 1;
             while (secim !=4)
             {
-
-                if (akillimutfak.havalandirma.calisiyor == true) Console.Write("Havalandirma calisiyor");
+                System.Console.Clear();
+                if (akillimutfak.havalandirma.calisiyor == true) Console.WriteLine("Havalandirma calisiyor");
             else Console.WriteLine("Havalandirma calismiyor");
             if (akillimutfak.havalandirma.otomatik == true) Console.WriteLine("Otomatik havalandirma acik");
             else Console.WriteLine("Otomatik havalandirma kapali\n\n");
@@ -133,18 +127,14 @@ namespace AkilliMutfak
         public void KlimaArayuz()
         {
             System.Console.Clear();
-            int secim;
-            if (akillimutfak.klima.calisiyor == true) Console.Write("Klima calisiyor");
-            else Console.WriteLine("Klima calismiyor");
-            if (akillimutfak.klima.calisiyor == true) Console.WriteLine("Otomatik sogutma acik");
-            else Console.WriteLine("Otomatik sogutma kapali\n\n");
+            int secim = 1;
 
             Console.WriteLine("1-)Ac\n2-)Kapa\n3-)Otomatik sogutmayi ac/kapa\n4-)Cikis");
             secim = (Convert.ToInt32(Console.ReadLine()));
             while (secim != 4)
             {
-
-                if (akillimutfak.klima.calisiyor == true) Console.Write("Klima calisiyor");
+                System.Console.Clear();
+                if (akillimutfak.klima.calisiyor == true) Console.WriteLine("Klima calisiyor");
                 else Console.WriteLine("Klima calismiyor");
                 if (akillimutfak.klima.calisiyor == true) Console.WriteLine("Otomatik sogutma acik");
                 else Console.WriteLine("Otomatik sogutma kapali\n\n");
@@ -173,18 +163,13 @@ namespace AkilliMutfak
         public void IsiticiArayuz()
         {
             System.Console.Clear();
-            int secim;
-            if (akillimutfak.isitici.calisiyor == true) Console.Write("Isitici calisiyor");
-            else Console.WriteLine("Isitici calismiyor");
-            if (akillimutfak.isitici.otomatik == true) Console.WriteLine("Otomatik isitma acik");
-            else Console.WriteLine("Otomatik isitma kapali\n\n");
+            int secim=1;
+            
 
-            Console.WriteLine("1-)Ac\n2-)Kapa\n3-)Otomatik isitmayi ac/kapa\n4-)Cikis");
-            secim = (Convert.ToInt32(Console.ReadLine()));
             while (secim != 4)
             {
-
-                if (akillimutfak.isitici.calisiyor == true) Console.Write("Isitici calisiyor");
+                System.Console.Clear();
+                if (akillimutfak.isitici.calisiyor == true) Console.WriteLine("Isitici calisiyor");
                 else Console.WriteLine("Isitici calismiyor");
                 if (akillimutfak.isitici.otomatik == true) Console.WriteLine("Otomatik isitma acik");
                 else Console.WriteLine("Otomatik havalandirma kapali\n\n");
@@ -213,36 +198,39 @@ namespace AkilliMutfak
         public void IsikArayuz()
         {
             System.Console.Clear();
-            int secim;
-            Console.WriteLine("1-)Tavan lambasini yak \t2-)Tavan lambasini kapa\n"+
-                "3-)Dolap lambalarini ac \t4-)Dolap lambalarini kapa\n"+
-                "5-)Yemek masasi lambasini ac \t6-)Yemek masasi lambasini kapa\n"
-                +"7-)Cikis ");
-            secim = (Convert.ToInt32(Console.ReadLine()));
-            while (secim !=7)
-            switch (secim)
+            int secim = 1;
+
+            while (secim != 7)
             {
-                case 1:
-                    akillimutfak.uzaktankumanda.acTusunaBas(4);
-                    break;
-                case 2:
-                    akillimutfak.uzaktankumanda.kapaTusunaBas(4);
-                    break;
-                case 3:
-                    akillimutfak.uzaktankumanda.acTusunaBas(5);
-                    break;
-                case 4:
-                    akillimutfak.uzaktankumanda.kapaTusunaBas(5);
-                    break;
-                case 5:
-                    akillimutfak.uzaktankumanda.acTusunaBas(6);
-                    break;
-                case 6:
-                    akillimutfak.uzaktankumanda.kapaTusunaBas(6);
-                    break;
-                default:
-                    secim = 7;
-                    break;
+                Console.WriteLine("1-)Tavan lambasini yak \t\t2-)Tavan lambasini kapa\n" +
+                "3-)Dolap lambalarini ac \t4-)Dolap lambalarini kapa\n" +
+                "5-)Yemek masasi lambasini ac \t6-)Yemek masasi lambasini kapa\n"
+                + "7-)Cikis ");
+                secim = (Convert.ToInt32(Console.ReadLine()));
+                switch (secim)
+                {
+                    case 1:
+                        akillimutfak.uzaktankumanda.acTusunaBas(4);
+                        break;
+                    case 2:
+                        akillimutfak.uzaktankumanda.kapaTusunaBas(4);
+                        break;
+                    case 3:
+                        akillimutfak.uzaktankumanda.acTusunaBas(5);
+                        break;
+                    case 4:
+                        akillimutfak.uzaktankumanda.kapaTusunaBas(5);
+                        break;
+                    case 5:
+                        akillimutfak.uzaktankumanda.acTusunaBas(6);
+                        break;
+                    case 6:
+                        akillimutfak.uzaktankumanda.kapaTusunaBas(6);
+                        break;
+                    default:
+                        secim = 7;
+                        break;
+                }
             }
         }
 

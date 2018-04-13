@@ -92,7 +92,7 @@ namespace AkilliMutfak
 
         public override string aciklama()
         {
-            return "+ Seker";
+            return sicakicecek.aciklama()+" + Seker";
         }
 
         public override Malzemeler MalzemeVer()
@@ -114,7 +114,7 @@ namespace AkilliMutfak
 
         public override string aciklama()
         {
-            return "+ Vanilya";
+            return sicakicecek.aciklama() + " + Vanilya";
         }
 
         public override Malzemeler MalzemeVer()
@@ -135,7 +135,7 @@ namespace AkilliMutfak
 
         public override string aciklama()
         {
-            return "+ Cikolata";
+            return sicakicecek.aciklama() + " + Cikolata";
         }
 
         public override Malzemeler MalzemeVer()
