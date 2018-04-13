@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
-    public class Isitici
+    public class Isitici : Observer
     {
         private IklimOlcumler Olcumler;
         public bool calisiyor;

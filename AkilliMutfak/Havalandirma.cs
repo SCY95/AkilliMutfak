@@ -6,11 +6,12 @@ using System.Threading.Tasks;
 
 namespace AkilliMutfak
 {
-    public class Havalandirma
+    public class Havalandirma : Observer
     {
         private IklimOlcumler Olcumler;
         public bool calisiyor;
         public bool otomatik;
+
 
         public Havalandirma()
         {
